@@ -10,7 +10,10 @@
 
   <script src="bundle.js"></script>
   <script type="text/javascript">
-  		appLoader();
+    // i've wrapped up my React Application with appLoader function,
+    // in case if i need to execute some scripts independently from react
+    // at initial launch. (eg.Cordova's deviceReady event etc.)
+		appLoader();
   </script>
 </body>
 </html>

@@ -5,23 +5,39 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot --open"
+    "start": "npm run dev & npm run server",
+    "dev": "webpack-dev-server --inline --hot --open",
+    "server": "nodemon --exec ts-node --max-old-space-size=4096 server/app.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "cookie-session": "~1.2.0",
+    "express": "4.14.0",
+    "shortid": "*",
+    "@types/body-parser": "*",
+    "@types/cookie-parser": "*",
+    "@types/cookie-session": "*",
+    "@types/express": "*"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.9.1",
     "webpack-dev-server": "^2.9.5",
-    "wrapper-webpack-plugin": "^1.0.0"
+    "wrapper-webpack-plugin": "^1.0.0",
+    "nodemon": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "@types/node": "*"
   }
 }
